@@ -124,7 +124,7 @@ COPY --from=builder /app/server /server
 #️⃣ Kopiowanie pliku index.html
 COPY --from=builder /app/index.html /index.html
 
-#️⃣ Ustawienie portu
+#️⃣ Ustawienie informacji o porcie
 EXPOSE 8080
 
 #️⃣ Komenda startowa
