@@ -194,7 +194,7 @@ docker build --build-arg BASE_VERSION=v1.0 -t local/dockerzad1:v1
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/build.png?token=GHSAT0AAAAAACRXVHYOSVLLG2MZPCVRBLVQZSJSBPQ" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/build.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 3. Zbudowanie obrazu dockerzad1:v1</i>
 </p>
@@ -205,7 +205,7 @@ Wyświetlono liczbę warstw nowoutworzonego obrazu.
 docker history local/dockerzad1:v1
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/warstwy.png?token=GHSAT0AAAAAACRXVHYPHOYIMXDHY75QHPGCZSJSDUQ" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/warstwy.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 4. Warstwy obrazu dockerzad1:v1</i>
 </p>
@@ -215,7 +215,7 @@ Sprawdzono obraz pod względem liczebności i jakości potencjalnych luk bezpiec
 docker scout quickview local/dockerzad1:v1
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/scout-quickview-obw.png?token=GHSAT0AAAAAACRXVHYOP72VETPILHBRJJ5UZSJSCOA" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/scout-quickview-obw.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 5. Liczba i jakość luk bezpieczeństwa w obrazie dockerzad1:v1</i>
 </p>
@@ -225,7 +225,7 @@ Wyświetlono również jego objętość.
 docker images --filter "reference=local/dockerzad1"
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/docker-images-obw.png?token=GHSAT0AAAAAACRXVHYP5DQ3L4ASUB3BSJDCZSJSDCA" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/docker-images-obw.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 6. Objętość obrazu części obowiązkowej</i>
 </p>
@@ -237,7 +237,7 @@ docker run -p 8080:8080 --name dockerzad1 local/dockerzad1:v1
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/docker-run.png?token=GHSAT0AAAAAACRXVHYPMV4WSXSPQDU2JKRWZSJSHUA" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/docker-run.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 7. Uruchomienie kontenera dockerzad1</i>
 </p>
@@ -248,7 +248,7 @@ docker logs dockerzad1
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/docker-logs.png?token=GHSAT0AAAAAACRXVHYOQQI5MTYEAD43WSJ4ZSJSJYA" style="width: 50%; height: 50%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/docker-logs.png" style="width: 50%; height: 50%" /></p>
 <p align="center">
   <i>Rys. 8. Dziennik zdarzeń dla kontenera dockerzad1 (fragment)</i>
 </p>
@@ -257,7 +257,7 @@ docker logs dockerzad1
 Uruchomiono przeglądarkę **« _Firefox_ »** i sprawdzono działanie serwera.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/localhost8080.png?token=GHSAT0AAAAAACRXVHYPFXMQYJWX7O436QDUZSJSEJA" style="width: 50%; height: 50%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/localhost8080.png" style="width: 50%; height: 50%" /></p>
 <p align="center">
   <i>Rys. 9. Efekt działania kontenera</i>
 </p>
@@ -360,7 +360,7 @@ docker buildx use dockerzad1
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/buildx-create.png?token=GHSAT0AAAAAACRXVHYOUL6UAJP2DZPZPMV4ZSJSEZA" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/buildx-create.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 11. Utworzenie i konfiguracja sterownika Docker Container</i>
 </p>
@@ -385,13 +385,13 @@ docker buildx build -f Dockerfile-2 --sbom=true --provenance=mode=max --ssh defa
 - ```.``` – określa kontekst kompliacji
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/buildx-build-1.png?token=GHSAT0AAAAAACRXVHYPXNUSKVK3KHAELLBMZSJSFCA" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/buildx-build-1.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 12. Zbudowanie obrazu ze zmodyfikowanego pliku Dockerfile – ½</i>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/buildx-build-2.png?token=GHSAT0AAAAAACRXVHYOESX6FJN4OP7T5YVQZSJSFHQ" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/buildx-build-2.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 13. Zbudowanie obrazu ze zmodyfikowanego pliku Dockerfile – ²⁄₂</i>
 </p>
@@ -406,7 +406,7 @@ docker buildx build -f Dockerfile-2 --sbom=true --provenance=mode=max --ssh defa
 ### 3.4. Inspekcja obrazu
 Zezwolono na analizowanie obrazu przez usługę [Docker Scout](https://docs.docker.com/scout/)
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/docker-scout.png?token=GHSAT0AAAAAACRXVHYO6SJPIG4DIYYKBOO4ZSJSFOQ" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/docker-scout.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 14. Podłączenie usługi Docker Scout pod obraz dockerzad1-2</i>
 </p>
@@ -416,7 +416,7 @@ Zweryfikowano zbudowany obraz pod kątem samej budowy.
 docker buildx imagetools inspect ppieczykolan/dockerzad1-2
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/buildx-inspect.png?token=GHSAT0AAAAAACRXVHYOJ5EJU5HFTSSEBJ6IZSJSF3Q" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/buildx-inspect.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 15. Sprawdzenie obecności i liczebności luk bezpieczeństwa</i>
 </p>
@@ -426,7 +426,7 @@ Sprawdzono liczbę warstw dla nowego obrazu.
 docker history ppieczykolan/dockerzad1-2
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/warstwy-2.png?token=GHSAT0AAAAAACRXVHYPLZ3F6TTF32PIH5WEZSJSF4Q" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/warstwy-2.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 16. Warstwy obrazu części dodatkowej</i>
 </p>
@@ -437,7 +437,7 @@ Sprawdzono również obecność luk bezpieczeństwa.
 docker scout quickview ppieczykolan/dockerzad1-2
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/scout-quickview.png?token=GHSAT0AAAAAACRXVHYOWZKYWUDYOO4ZFLOOZSJSGMQ" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/scout-quickview.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 17. Sprawdzenie obecności i liczebności luk bezpieczeństwa</i>
 </p>
@@ -450,7 +450,7 @@ Zaciągnięto obraz ze zdalnego repozytorium za pomocą
 docker pull ppieczykolan/dockerzad1-2
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/docker-pull.png?token=GHSAT0AAAAAACRXVHYOPHMEIHLQUA26AMAYZSJSGTA" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/docker-pull.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 18. Zaciągnięcie obrazu dockerzad1-2</i>
 </p>
@@ -461,7 +461,7 @@ docker run -p 8080:8080 --name dockerzad1-2 ppieczykolan/dockerzad1-2:latest
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/docker-run-2.png?token=GHSAT0AAAAAACRXVHYOJKJKMEKDSP57XTHCZSJSGYA" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/docker-run-2.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 19. Uruchomienie kontenera części dodatkowej</i>
 </p>
@@ -471,7 +471,7 @@ Zweryfikowano działanie kontenera części dodatkowej.
 Uruchomiono przeglądarkę i wpisano w pasku adresowym **« _http://localhost:8080_ »**.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/localhost8080-2.png?token=GHSAT0AAAAAACRXVHYPEQLILVEX6HLZNLDUZSJSG4Q" style="width: 50%; height: 50%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/localhost8080-2.png" style="width: 50%; height: 50%" /></p>
 <p align="center">
   <i>Rys. 20. Efekt działania kontenera części dodatkowej</i>
 </p>
@@ -483,7 +483,7 @@ docker images
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/docker-images.png?token=GHSAT0AAAAAACRXVHYPLQ7TZIBHL3WAZWVCZSJSIRQ" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/docker-images.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 21. Porównanie obrazów</i>
 </p>
