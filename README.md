@@ -275,7 +275,7 @@ Dodano:
 - ```# syntax=docker/dockerfile:1.4``` – odwołanie do oficjalnej i stabilnej wersji obrazu dla rozszerzonych frontend-ów
 - do instrukcji **« _RUN_ »** ```apk add --no-cache openssh-client git \``` – instalacja klienta **« _OpenSSH_ »** oraz **« _Git_ »** w kontenerze **« _Docker_ »**
 - do instrukcji **« _RUN_ »** ```mkdir -p -m 0700 ~/.ssh``` – utworzenie foldera **« _.ssh_ »** w katalogu domowym z uprawnieniami 700 (pełne uprawnienia dla właściciela katalogu), o ile taki katalog nie istnieje
-- do instrukcji **« _RUN_ »** ```ssh-keyscan github.com >> ~/.ssh/known_hosts && eval $(ssh-agent)``` – komentarz
+- do instrukcji **« _RUN_ »** ```ssh-keyscan github.com >> ~/.ssh/known_hosts && eval $(ssh-agent)``` – konfiguracja środowiska do korzystania z GitHuba poprzez SSH; uruchomienie agenta SSH
 - ```RUN --mount=type=ssh git clone git@github.com:97703/DockerZad1.git DockerZad1``` – klonowanie prywatnego repozytorium **« _Git_ »**, przy wykorzystaniu bezpiecznego dostępu **« _SSH_ »**
 - ```mv /app/DockerZad1/server.c /app/DockerZad1/index.html /app``` – przeniesienie plików ze sklonowanego repozytorium
 - do pierwszej instrukcji **« _RUN_ »** etapu pierwszego ```--mount=type=cache,target=/var/cache/apk``` – wskazuje folder **« _apk_ »** dla mechanizmu cache'owania
