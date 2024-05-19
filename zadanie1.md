@@ -117,7 +117,7 @@ docker build --build-arg BASE_VERSION=v1.0 -t local/dockerzad1:v1
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/build.png?token=GHSAT0AAAAAACRXVHYOSVLLG2MZPCVRBLVQZSJSBPQ" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/build.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 3. Zbudowanie obrazu dockerzad1:v1</i>
 </p>
@@ -128,7 +128,7 @@ Wyświetlono liczbę warstw nowoutworzonego obrazu.
 docker history local/dockerzad1:v1
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/warstwy.png?token=GHSAT0AAAAAACRXVHYPHOYIMXDHY75QHPGCZSJSDUQ" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/warstwy.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 4. Warstwy obrazu dockerzad1:v1</i>
 </p>
@@ -138,7 +138,7 @@ Sprawdzono obraz pod względem liczebności i jakości potencjalnych luk bezpiec
 docker scout quickview local/dockerzad1:v1
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/scout-quickview-obw.png?token=GHSAT0AAAAAACRXVHYOP72VETPILHBRJJ5UZSJSCOA" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/scout-quickview-obw.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 5. Liczba i jakość luk bezpieczeństwa w obrazie dockerzad1:v1</i>
 </p>
@@ -148,7 +148,7 @@ Wyświetlono również jego objętość.
 docker images --filter "reference=local/dockerzad1"
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/docker-images-obw.png?token=GHSAT0AAAAAACRXVHYP5DQ3L4ASUB3BSJDCZSJSDCA" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/docker-images-obw.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 6. Objętość obrazu części obowiązkowej</i>
 </p>
@@ -160,7 +160,7 @@ docker run -p 8080:8080 --name dockerzad1 local/dockerzad1:v1
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/docker-run.png?token=GHSAT0AAAAAACRXVHYPMV4WSXSPQDU2JKRWZSJSHUA" style="width: 80%; height: 80%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/docker-run.png" style="width: 80%; height: 80%" /></p>
 <p align="center">
   <i>Rys. 7. Uruchomienie kontenera dockerzad1</i>
 </p>
@@ -171,7 +171,7 @@ docker logs dockerzad1
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/docker-logs.png?token=GHSAT0AAAAAACRXVHYOQQI5MTYEAD43WSJ4ZSJSJYA" style="width: 50%; height: 50%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/docker-logs.png" style="width: 50%; height: 50%" /></p>
 <p align="center">
   <i>Rys. 8. Dziennik zdarzeń dla kontenera dockerzad1 (fragment)</i>
 </p>
@@ -180,7 +180,7 @@ docker logs dockerzad1
 Uruchomiono przeglądarkę **« _Firefox_ »** i sprawdzono działanie serwera.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/97703/DockerZad1/main/Rysunki/localhost8080.png?token=GHSAT0AAAAAACRXVHYPFXMQYJWX7O436QDUZSJSEJA" style="width: 50%; height: 50%" /></p>
+  <img src="https://github.com/97703/DockerZad1/blob/main/Rysunki/localhost8080.png" style="width: 50%; height: 50%" /></p>
 <p align="center">
   <i>Rys. 9. Efekt działania kontenera</i>
 </p>
