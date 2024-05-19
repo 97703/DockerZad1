@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacje o Kliencie</title>
+    <script>
+        fetch("https://api.ipify.org?format=json")
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("ip").innerText = data.ip;
+                return fetch("https://worldtimeapi.org/api/ip/" + data.ip);
+            })
+            .then(response => response.json())
+            .then(data => {
+                var czas = new Date(data.utc_datetime);
+                document.getElementById("czas").innerText = czas.toLocaleString();
+                document.getElementById("strefa").innerText = data.timezone;
+            })
+            .catch(error => console.error('Błąd:', error));
+    </script>
+</head>
+<body>
+    <h1>Informacje o Kliencie</h1>
+    <p>Adres IP klienta: <span id="ip"></span></p>
+    <p>Czas związany ze strefą czasową tego IP: <span id="czas"></span></p>
+    <p>Strefa czasowa: <span id="strefa"></span></p>
+</body>
+</html>

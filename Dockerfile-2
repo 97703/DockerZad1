@@ -1,0 +1,52 @@
+# syntax=docker/dockerfile:1.4
+# Etap 1: Budowanie pliku binarnego serwera C
+FROM alpine:3.19.1 AS builder
+
+# Ustawienie zmiennej środowiskowej BASE_VERSION, z domyślną wartościa v1
+ARG BASE_VERSION
+ENV APP_VERSION=${BASE_VERSION:-v1}
+
+# Instalacja kompilatora C i musl-dev
+RUN --mount=type=cache,target=/var/cache/apk \
+    apk add --no-cache build-base musl-dev \
+    # Czyszczenie pamięci podręcznej apk
+    && rm -rf /var/cache/apk/* \
+    # Instalacja klienta SSH i GITa
+    && apk add --no-cache openssh-client git \
+    # Konfiguracja SSH dla dostępu do GitHub
+    && mkdir -p -m 0700 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts && eval $(ssh-agent)
+
+# Ustawienie katalogu roboczego
+WORKDIR /app
+
+# Sklonowanie repozytorium i przeniesienie plików
+RUN --mount=type=ssh git clone git@github.com:97703/DockerZad1.git DockerZad1 \
+    && mv /app/DockerZad1/server.c /app/DockerZad1/index.html /app
+
+# Kompilacja statyczna, utworzenie pliku binarnego
+RUN --mount=type=cache,target=/var/cache/gcc \
+    gcc -static -o server server.c
+
+# Etap 2: Tworzenie minimalnego obrazu
+FROM scratch as final
+
+# Ustawienie zmiennej środowiskowej BASE_VERSION, z domyślną wartościa v1
+ARG BASE_VERSION
+ENV APP_VERSION=${BASE_VERSION:-v1}
+
+# Informacje o autorze, dokumentacji i licencji
+LABEL org.opencontainers.image.authors="Paweł Pieczykolan"
+LABEL org.opencontainers.image.documentation="https://github.com/97703/DockerLabZad1"
+LABEL org.opencontainers.image.licenses="GNU v3.0"
+
+# Kopiowanie bin z etapu budowania
+COPY --from=builder /app/server /server
+
+# Kopiowanie pliku index.html
+COPY --from=builder /app/index.html /index.html
+
+# Ustawienie portu
+EXPOSE 8080
+
+# Komenda startowa
+ENTRYPOINT ["/server"]
